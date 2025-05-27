@@ -1,0 +1,16 @@
+services:
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:latest
+    environment:
+      - DT_API_TOKEN=${DT_API_TOKEN}
+      - DT_ENDPOINT=${DT_ENDPOINT}
+    volumes:
+      - ./otel-collector-config.yml:/etc/otel-collector-config.yml
+    command: ["--config=/etc/otel-collector-config.yml"]
+    ports:
+      - "4317:4317"  # OTLP gRPC
+      - "4318:4318"  # OTLP HTTP
+  app-python:
+    build: ./app_python
+    ports:
+      - "5000:5000"
