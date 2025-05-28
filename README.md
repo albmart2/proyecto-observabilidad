@@ -6,7 +6,7 @@ Proyecto de Observabilidad con OpenTelemetry y Dynatrace.
 
 Para poder ejecutar el proyecto, se debe de modificar el fichero ```.env```. Se deben de modificar las dos variables, con tu ```TOKEN``` y tu ```ENDPOINT``` personal.
 
-
+![imagen](https://github.com/albmart2/proyecto-observabilidad/blob/main/capturas/CapturaEnv.jpg)
 
 ## Ejecución del proyecto
 
