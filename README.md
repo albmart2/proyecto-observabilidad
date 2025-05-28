@@ -3,7 +3,7 @@
 Proyecto de Observabilidad con OpenTelemetry y Dynatrace.
 
 ## Estructura del proyecto
-
+```
 proyecto-observabilidad/
 ├── app/
 │   ├── app.py
@@ -11,6 +11,7 @@ proyecto-observabilidad/
 │   └── requirements.txt
 ├── .env
 └── docker-compose.yml
+```
 
 ## Modificaciones previas a la ejecución del proyecto
 
