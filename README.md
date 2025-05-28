@@ -1,6 +1,6 @@
 # Proyecto Observabilidad
 
-Proyecto de Observabilidad con OpenTelemetry y Dynatrace
+Proyecto de Observabilidad con OpenTelemetry y Dynatrace.
 
 ## Ejecución del proyecto
 
@@ -19,3 +19,7 @@ Necesitamos tener dos terminales. A continuación vamos a ver como ejecutar el p
 	```
 
 ## Gráficas con las métricas recibidas
+
+Aquí se encuentra las gráficas de las métricas recibidas de la app en python creada anteriormente.
+
+![imagen](https://github.com/albmart2/proyecto-observabilidad/blob/main/CapturasGraficas/Dynatrace.jpg)
