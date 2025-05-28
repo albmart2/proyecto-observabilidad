@@ -2,6 +2,12 @@
 
 Proyecto de Observabilidad con OpenTelemetry y Dynatrace.
 
+## Modificaciones previas a la ejecución del proyecto
+
+Para poder ejecutar el proyecto, se debe de modificar el fichero ```.env```. Se deben de modificar las dos variables, con tu ```TOKEN``` y tu ```ENDPOINT``` personal.
+
+
+
 ## Ejecución del proyecto
 
 Necesitamos tener dos terminales. A continuación vamos a ver como ejecutar el proyecto correctamente:
