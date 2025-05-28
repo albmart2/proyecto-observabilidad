@@ -84,6 +84,16 @@ Necesitamos tener dos terminales. A continuación vamos a ver como ejecutar el p
 |No aparecen métricas en Dynatrace|Revisar la configuración de endpoints y variables de entorno|
 |Error de tipo de métrica|Asegurarse de usar temporality DELTA|
 
+## Referencias
+
+- [OpenTelemetry Python](https://opentelemetry.io/docs/languages/python/)
+
+- [Dynatrace OpenTelemetry](https://docs.dynatrace.com/docs/ingest-from/opentelemetry)
+
+## Buenas prácticas
+
+Se recomienda mantener los contenedores activos, revisar los logs, y seguir las práctgicas recomendadas para instrumentar la app Python.
+
 ## Gráficas con las métricas recibidas
 
 Aquí se encuentra las gráficas de las métricas recibidas de la app en python creada anteriormente.
