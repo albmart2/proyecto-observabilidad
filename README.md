@@ -6,7 +6,7 @@ Este proyecto muestra cómo monitorizar una aplicación Python usando OpenTeleme
 
 OpenTelemetry (OTel) es un proyecto de código abierto que proporciona un estándar y un conjunto de herramientas para recopilar, procesar y exportar datos de telemetría (trazas, métricas y registros) de aplicaciones y sistemas distribuidos.
 
-##¿Qué es Dynatrace?
+## ¿Qué es Dynatrace?
 
 Dynatrace es una plataforma global que combina la observabilidad, AIOps y seguridad de aplicaciones en una única solución. Esta plataforma ayuda a los equipos a innovar más rápido, operar de manera más eficiente y mejorar los resultados de negocio. Dynatrace utiliza inteligencia artificial y automatización para proporcionar respuestas precisas y rápidas a los problemas de rendimiento, seguridad y experiencia de usuario en sus aplicaciones y sistemas.
 
@@ -75,6 +75,14 @@ Necesitamos tener dos terminales. A continuación vamos a ver como ejecutar el p
 - URL típica: ```https://<TU_ENTORNO>.live.dynatrace.com/ui/metrics```.
 
 - Crear un nuevo Dashboards y elegir las métricas necesarias, como por ejemplo, ```http.server.requests``` o ```system.memory.usage```.
+
+## Solución porblemas comunes
+
+|Problema|Solución|
+|--------|--------|
+|El contenedor se detiene|Revisar logs|
+|No aparecen métricas en Dynatrace|Revisar la configuración de endpoints y variables de entorno|
+|Error de tipo de métrica|Asegurarse de usar temporality DELTA|
 
 ## Gráficas con las métricas recibidas
 
