@@ -3,6 +3,9 @@ receivers:
     protocols:
       http:
         endpoint: 0.0.0.0:4318
+  filelog:
+    include: [ /var/log/syslog ]
+    start_at: beginning
 
 processors:
   batch:
@@ -22,5 +25,9 @@ service:
     metrics:
       receivers: [otlp]
       processors: [batch]
+      exporters: [otlphttp/dynatrace]
+    logs:
+      receivers: [filelog]
+      processors: []
       exporters: [otlphttp/dynatrace]
 

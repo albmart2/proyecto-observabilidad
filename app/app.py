@@ -9,6 +9,7 @@ from opentelemetry.sdk.metrics.export import PeriodicExportingMetricReader
 # 1. Exporter
 exporter = OTLPMetricExporter(endpoint="http://otel-collector:4318/v1/metrics")
 
+
 # 2. MetricReader
 reader = PeriodicExportingMetricReader(exporter)
 
@@ -20,6 +21,7 @@ metrics.set_meter_provider(provider)
 
 # 5. Obtener el meter y crear la métrica
 meter = metrics.get_meter("demo-python-service")
+
 counter = meter.create_counter(
     name="requests.total",
     description="Número total de solicitudes",
