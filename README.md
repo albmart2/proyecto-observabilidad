@@ -1,27 +1,21 @@
 # Proyecto Observabilidad
 
-## Instalaciones previas
+Proyecto de Observabilidad con OpenTelemetry y Dynatrace
 
-### Instalación de las dependencias
+## Ejecución del proyecto
 
-```bash
-pip install -r requirements.txt
-```
+Necesitamos tener dos terminales. A continuación vamos a ver como ejecutar el proyecto correctamente:
 
-### Instalacion Ansible en Linux (Debian/Ubuntu)
-
-1. Instalar Ansible:
+1. En la primera terminal, debemos de general el docker compose con todas las configuraciones.
 
 	```bash
-	sudo apt update
+	docker compose up --build
 	```
+
+2. En la segunda terminal, debemos de ejecutar la app para que empieze mandar métricas a Dynatrace.
 
 	```bash
-	sudo apt install ansible -y
+	python3 app.py
 	```
 
-2. Verificar la disponibilidad de ansible-galaxy:
-
-	```bash
-	ansible-galaxy --help
-	```
+## Gráficas con las métricas recibidas
