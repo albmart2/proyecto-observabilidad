@@ -13,15 +13,14 @@ Dynatrace es una plataforma global que combina la observabilidad, AIOps y seguri
 ## Estructura del proyecto
 
 ```mermaid
-%%{init: {'flowchart': {'curve': 'stepBefore'}}}%%
-graph LR
-A[proyecto-observabilidad/]
-A --> B[app/]
-B --> B1[app.py]
-B --> B2[Dockerfile]
-B --> B3[requirements.txt]
-A --> C[.env]
-A --> D[docker-compose.yml]
+flowchart-elk LR
+A["proyecto-observabilidad/"]
+A --> B["app/"]
+B --> B1["app.py"]
+B --> B2["Dockerfile"]
+B --> B3["requirements.txt"]
+A --> C[".env"]
+A --> D["docker-compose.yml"]
 ```
 
 ### Descripción ampliada de la estructura del proyecto
