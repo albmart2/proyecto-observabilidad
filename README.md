@@ -22,6 +22,28 @@ proyecto-observabilidad/
 └── docker-compose.yml
 ```
 
+### Descripción ampliada de la estructura del proyecto
+
+- **app/app.py**: Aplicación principal de Python instrumentada con OpenTelemetry.
+
+- **app/Dockerfile**: Imagen Docker para la app Python.
+
+- **app/requirements.txt**: Dependencias de Python.
+
+- **.env**: Tocken de API y endpoint de Dynatrace.
+
+- **docker-compose.yml**: Orquestración de contenedores Collector y app.
+
+## Flujo de integración OpenTelemetry + Dynatrace
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
 ## Requisitos previos
 
 - Docker y Docker compose instalados.
