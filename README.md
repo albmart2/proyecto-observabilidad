@@ -13,7 +13,8 @@ Dynatrace es una plataforma global que combina la observabilidad, AIOps y seguri
 ## Estructura del proyecto
 
 ```mermaid
-flowchart-elk LR
+%%{init: {'flowchart': {'curve': 'linear'}}}%%
+graph LR
 A["proyecto-observabilidad/"]
 A --> B["app/"]
 B --> B1["app.py"]
