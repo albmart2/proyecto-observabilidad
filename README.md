@@ -38,10 +38,8 @@ proyecto-observabilidad/
 
 ```mermaid
 graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+    La app Python exporta métricas y trazas vía OTLP al OpenTelemetry Collector.-->El Collector reenvía la telemetría a Dynatrace usando el exporter OTLP HTTP.;
+    El Collector reenvía la telemetría a Dynatrace usando el exporter OTLP HTTP.-->Dynatrace ingiere, analiza y visualiza los datos.;
 ```
 
 ## Requisitos previos
