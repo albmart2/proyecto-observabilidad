@@ -96,6 +96,10 @@ Necesitamos tener dos terminales. A continuación vamos a ver como ejecutar el p
 
 - Crear un nuevo Dashboards y elegir las métricas necesarias, como por ejemplo, ```http.server.requests``` o ```system.memory.usage```.
 
+## Seguridad y gestión de tokens
+
+Se debe de proteger el **token de API** y no subir archivos ```.env``` con secretos a sistemas de control de versiones.
+
 ## Solución porblemas comunes
 
 |Problema|Solución|
@@ -103,16 +107,42 @@ Necesitamos tener dos terminales. A continuación vamos a ver como ejecutar el p
 |El contenedor se detiene|Revisar logs|
 |No aparecen métricas en Dynatrace|Revisar la configuración de endpoints y variables de entorno|
 |Error de tipo de métrica|Asegurarse de usar temporality DELTA|
+|El Collector no accede a los logs|Asegúrate de montar los archivos de logs como volúmenes en Docker|
+|Métricas no visibles en Data Explorer|Revisa nombres, temporality y logs de ingesta|
+"UNSUPPORTED_METRIC_TYPE_MONOTONIC_CUMULATIVE_SUM"|Usa temporality DELTA para los contadores|
+|Errores de autenticación|Verifica el token y el endpoint en ```.env```|
 
 ## Referencias
+
+- [Dynatrace Docs: Buenas prácticas OpenTelemetry](https://docs.dynatrace.com/docs/ingest-from/opentelemetry/best-practices/traces)
+
+- [Dynatrace Docs: Dashboards](https://www.dynatrace.com/platform/dashboards/)
+
+- [Dynatrace API Docs](https://docs.dynatrace.com/docs/discover-dynatrace/references/dynatrace-api/environment-api/metric-v2/metric-expressions)
 
 - [OpenTelemetry Python](https://opentelemetry.io/docs/languages/python/)
 
 - [Dynatrace OpenTelemetry](https://docs.dynatrace.com/docs/ingest-from/opentelemetry)
 
+- [YouTube: OpenTelemetry con Dynatrace](https://www.youtube.com/watch?v=d_gbZpeZA0Y)
+
 ## Buenas prácticas
 
 Se recomienda mantener los contenedores activos, revisar los logs, y seguir las práctgicas recomendadas para instrumentar la app Python.
+
+##  Escenarios avanzados de uso
+
+- **Detección automática de anomalías y análisis de causa raíz** (IA Davis).
+
+- **Alertas**: Configura eventos de métrica para recibir notificaciones ante anomalías o umbrales críticos.
+
+- **SLOs**: Define Objetivos de Nivel de Servicio usando tus métricas.
+
+- **Correlación**: Relaciona métricas con trazas y logs para troubleshooting profundo.
+
+- **Automatización**: Lanza flujos de remediación automática basados en eventos de métrica.
+
+- **API**: Consulta métricas y trazas mediante la API de Dynatrace para reportes externos o integración.
 
 ## Gráficas con las métricas recibidas
 
